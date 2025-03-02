@@ -1,0 +1,26 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "A social network web application where users can share their thoughts.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/validai/social-network-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/validai/social-network-api/issues"
+  },
+  "homepage": "https://github.com/validai/social-network-api#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mongoose": "^8.11.0"
+  }
+}
