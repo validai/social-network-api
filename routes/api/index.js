@@ -1,12 +1,12 @@
-import express from "express";
-import thoughtRoutes from "./thoughtRoutes.js";
-import userRoutes from "./userRoutes.js";
-import reactionRoutes from "./reactionRoutes.js"; // <-- Import Reaction Routes
-
+const express = require("express");
 const router = express.Router();
+
+const thoughtRoutes = require("./thoughtRoutes");
+const userRoutes = require("./userRoutes");
+const reactionRoutes = require("./reactionRoutes");
 
 router.use("/thoughts", thoughtRoutes);
 router.use("/users", userRoutes);
-router.use("/reactions", reactionRoutes); // <-- Add Reactions Route
+router.use("/reactions", reactionRoutes);
 
-export default router;
+module.exports = router; 
