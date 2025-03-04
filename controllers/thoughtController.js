@@ -17,7 +17,7 @@ module.exports = {
   async getThoughtById(req, res) {
     try {
       const thought = await Thought.findById(req.params.thoughtId);
-      if (!thought) return res.status(404).json({ message: 'No thought found with this ID' });
+      if (!thought) return res.status(404).json({ message: "No thought found with this ID" });
       res.json(thought);
     } catch (err) {
       console.error(err);
@@ -43,7 +43,6 @@ module.exports = {
       res.status(500).json({ message: 'Error creating thought', error: err.message });
     }
   },
-
 
   async updateThought(req, res) {
     try {
