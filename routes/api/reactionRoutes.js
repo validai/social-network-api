@@ -1,14 +1,15 @@
-import express from "express";
-import { addReaction, getReactions, deleteReaction } from "../../controllers/reactionController.js";
+const router = require('express').Router();
+const {
+  getReactions,
+  addReaction,
+  deleteReaction,
+} = require('../../controllers/reactionController');
 
-const router = express.Router();
+router.route('/')
+  .get(getReactions)
+  .post(addReaction);
 
-router.get("/", getReactions);
+router.route('/:reactionId')
+  .delete(deleteReaction);
 
-
-router.post("/", addReaction);
-
-
-router.delete("/:reactionId", deleteReaction);
-
-export default router;
+module.exports = router;
