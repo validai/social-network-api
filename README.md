@@ -22,7 +22,7 @@ This project is a **Social Media API** built using **Node.js, Express, and Mongo
    npm install
 
 3. Start the server:
-   npm start
+   npm run dev
 
 ## API Routes
 
